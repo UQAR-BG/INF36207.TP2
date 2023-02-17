@@ -13,11 +13,18 @@ public class Md5Hasher : IHasher
 {
     public string ComputeHash(string input)
     {
+        if (string.IsNullOrEmpty(input))
+            return string.Empty;
+
+        byte[] hashBytes = ComputeHashBytesFrom(input);
+        return ToString(hashBytes);
+    }
+
+    private static byte[] ComputeHashBytesFrom(string input)
+    {
         MD5 md5 = MD5.Create();
         byte[] inputBytes = Encoding.UTF8.GetBytes(input.Normalize(NormalizationForm.FormKC));
-        byte[] hashBytes = md5.ComputeHash(inputBytes);
-
-        return ToString(hashBytes);
+        return md5.ComputeHash(inputBytes);
     }
 
     private static string ToString(byte[] hashBytes)

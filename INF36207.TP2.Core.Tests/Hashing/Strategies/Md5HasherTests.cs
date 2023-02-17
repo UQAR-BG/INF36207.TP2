@@ -31,11 +31,10 @@ public class Md5HasherTests
     }
     
     [Fact]
-    public void GivenEmptyInput_WhenComputeHash_ThenReturnMd5Hash()
+    public void GivenEmptyInput_WhenComputeHash_ThenReturnEmptyString()
     {
         // Arrange
         string input = string.Empty;
-        string expectedHash = "D41D8CD98F00B204E9800998ECF8427E";
         
         // Act
         var result = _hasher.ComputeHash(input);
@@ -43,6 +42,20 @@ public class Md5HasherTests
         // Assert
         result.Should().NotBeNull();
         result.Should().BeOfType<string>();
-        result.Should().BeEquivalentTo(expectedHash);
+        result.Should().BeEquivalentTo(string.Empty);
+    }
+    
+    [Fact]
+    public void GivenNullInput_WhenComputeHash_ThenReturnEmptyString()
+    {
+        // Arrange
+        
+        // Act
+        var result = _hasher.ComputeHash(null);
+
+        // Assert
+        result.Should().NotBeNull();
+        result.Should().BeOfType<string>();
+        result.Should().BeEquivalentTo(string.Empty);
     }
 }
