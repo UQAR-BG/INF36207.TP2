@@ -1,5 +1,6 @@
 using INF36207.TP2.Files;
 using INF36207.TP2.Files.Interfaces;
+using FileNotFoundException = INF36207.TP2.Exceptions.FileNotFoundException;
 
 namespace INF36207.TP2.Core.Tests.Files;
 
@@ -10,14 +11,14 @@ public class PasswordDictionaryWriterTests
     private const string FileName = "TextFileForWriteTests.txt";
     
     [Fact]
-    public async Task WhenWriteLine_FileContainsNumberOfLines()
+    public void WhenWriteLine_FileContainsNumberOfLines()
     {
         // Arrange
         _writer = new PasswordDictionaryWriter(FileName);
 
         // Act
-        await _writer.WriteLine("hello");
-        await _writer.WriteLine("world");
+        _writer.WriteLine("hello");
+        _writer.WriteLine("world");
         _writer.Close();
 
         _reader = new PasswordDictionaryReader(FileName);

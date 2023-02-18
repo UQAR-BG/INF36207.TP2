@@ -1,77 +1,49 @@
 using INF36207.TP2.Files.Interfaces;
-using File = INF36207.TP2.Files.Entities.File;
-using FileNotFoundException = INF36207.TP2.Exceptions.FileNotFoundException;
+using INF36207.TP2.Files.States;
 
 namespace INF36207.TP2.Files;
 
 public class PasswordDictionaryWriter : ITextWriter
 {
-    private StreamWriter? _streamWriter;
-    private File? _file;
-    
-    public PasswordDictionaryWriter() { }
+    private ITextWriter _writer;
+
+    public PasswordDictionaryWriter()
+    {
+        _writer = new ClosedPasswordDictionaryWriter();
+    }
     
     public PasswordDictionaryWriter(string fileName)
     {
-        Open(fileName);
+        _writer = new OpenedPasswordDictionaryWriter(fileName);
     }
     
     public bool IsOpened()
     {
-        return CanWrite();
+        return _writer.IsOpened();
     }
 
     public bool IsClosed()
     {
-        return !IsOpened();
+        return _writer.IsClosed();
     }
     
     public void Open(string fileName)
     {
-        _file = new File(fileName);
-        OpenStreamWriterIfNeeded(_file);
+        _writer = new OpenedPasswordDictionaryWriter(fileName);
     }
 
     public void Close()
     {
-        if (!IsOpened()) 
-            return;
-        
-        _streamWriter?.Dispose();
-        _streamWriter = null;
+        _writer = new ClosedPasswordDictionaryWriter();
     }
 
     public async Task Write(IEnumerable<string> content)
     {
-        foreach (string line in content)
-        {
-            await WriteLine(line);
-        }
+        await _writer.Write(content);
     }
 
     public async Task WriteLine(string line)
     {
-        if (!CanWrite())
-            throw new FileNotFoundException("Un fichier doit être ouvert pour l'écriture.");
-        
-        await _streamWriter!.WriteLineAsync(line);
-    }
-    
-    private void OpenStreamWriterIfNeeded(File file)
-    {
-        if (!IsOpened())
-        {
-            OpenStreamWriter(file);
-        }
-    }
-    
-    private void OpenStreamWriter(File file)
-    {
-        _streamWriter = new StreamWriter(file.FileFullName);
-    }
-
-    private bool CanWrite()
-    {
-        return _file != null && _streamWriter != null;
+        await _writer.WriteLine(line);
     }
 }
