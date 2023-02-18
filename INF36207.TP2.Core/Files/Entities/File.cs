@@ -53,6 +53,8 @@ public class File
             _fileFullName = value;
         }
     }
+    
+    public int NumberOfLines { get; set; }
 
     public File(string fileFullName)
     {
