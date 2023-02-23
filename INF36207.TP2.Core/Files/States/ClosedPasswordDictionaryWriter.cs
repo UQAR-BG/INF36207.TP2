@@ -24,12 +24,12 @@ public class ClosedPasswordDictionaryWriter : ITextWriter
 
     public void Close() { }
 
-    public Task Write(IEnumerable<string> content)
+    public void Write(IEnumerable<string> content)
     {
         throw new FileNotFoundException("Un fichier doit être ouvert pour l'écriture.");
     }
 
-    public Task WriteLine(string line)
+    public void WriteLine(string line)
     {
         throw new FileNotFoundException("Un fichier doit être ouvert pour l'écriture.");
     }

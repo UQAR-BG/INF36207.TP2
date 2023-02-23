@@ -37,13 +37,13 @@ public class PasswordDictionaryWriter : ITextWriter
         _writer = new ClosedPasswordDictionaryWriter();
     }
 
-    public async Task Write(IEnumerable<string> content)
+    public void Write(IEnumerable<string> content)
     {
-        await _writer.Write(content);
+        _writer.Write(content);
     }
 
-    public async Task WriteLine(string line)
+    public void WriteLine(string line)
     {
-        await _writer.WriteLine(line);
+        _writer.WriteLine(line);
     }
 }

@@ -37,9 +37,9 @@ public class PasswordDictionaryWriterTests
         _writer = new PasswordDictionaryWriter();
 
         // Act
-        var result = async () => await _writer.WriteLine("Hello World");
+        var result = () => _writer.WriteLine("Hello World");
 
         // Assert
-        result.Should().ThrowAsync<FileNotFoundException>();
+        result.Should().Throw<FileNotFoundException>();
     }
 }
