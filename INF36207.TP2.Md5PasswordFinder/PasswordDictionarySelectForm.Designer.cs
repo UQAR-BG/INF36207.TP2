@@ -37,7 +37,6 @@
             // 
             this.openFileDialog.DefaultExt = "txt";
             this.openFileDialog.Filter = "Text files (*.txt)|*.txt";
-            this.openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog_FileOk);
             // 
             // lblOuvrirFichier
             // 

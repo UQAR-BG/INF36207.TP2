@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblNbreMots = new System.Windows.Forms.Label();
-            this.countdown = new System.Windows.Forms.Timer(this.components);
             this.panelNbrMots = new System.Windows.Forms.Panel();
             this.picCadenas = new System.Windows.Forms.PictureBox();
             this.lblHash = new System.Windows.Forms.Label();
@@ -50,11 +48,6 @@
             this.lblNbreMots.Size = new System.Drawing.Size(133, 13);
             this.lblNbreMots.TabIndex = 0;
             this.lblNbreMots.Text = "Mots dans le dictionnaire : ";
-            // 
-            // countdown
-            // 
-            this.countdown.Interval = 1000;
-            this.countdown.Tick += new System.EventHandler(this.countdown_Tick);
             // 
             // panelNbrMots
             // 
@@ -144,7 +137,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblNbreMots;
-        private System.Windows.Forms.Timer countdown;
         private System.Windows.Forms.Panel panelNbrMots;
         private System.Windows.Forms.PictureBox picCadenas;
         private System.Windows.Forms.Label lblHash;
