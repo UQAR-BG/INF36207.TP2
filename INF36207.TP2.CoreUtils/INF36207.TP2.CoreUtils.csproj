@@ -53,6 +53,7 @@
     <Compile Include="Files\Interfaces\ITextReader.cs" />
     <Compile Include="Files\Interfaces\ITextWriter.cs" />
     <Compile Include="Files\PasswordDictionaryReader.cs" />
+    <Compile Include="Files\PasswordDictionaryGenerator.cs" />
     <Compile Include="Files\PasswordDictionaryWriter.cs" />
     <Compile Include="Files\States\ClosedPasswordDictionaryReader.cs" />
     <Compile Include="Files\States\ClosedPasswordDictionaryWriter.cs" />

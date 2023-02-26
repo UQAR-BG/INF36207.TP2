@@ -397,10 +397,10 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-INF36207.TOTP.Core/obj/project.nuget.cache
-INF36207.TOTP.Core/obj/project.assets.json
-INF36207.TOTP.Core/obj/Debug/net6.0/INF36207.TOTP.Core.csproj.CoreCompileInputs.cache
-INF36207.TOTP.Core/obj/Debug/net6.0/INF36207.TOTP.Core.GeneratedMSBuildEditorConfig.editorconfig
-INF36207.TOTP.Core/obj/INF36207.TOTP.Core.csproj.nuget.dgspec.json
-INF36207.TOTP.Core/obj/INF36207.TOTP.Core.csproj.nuget.g.props
-INF36207.TOTP.Core/obj/INF36207.TOTP.Core.csproj.nuget.g.targets
+INF36207.TOTP2.Core/obj/project.nuget.cache
+INF36207.TOTP2.Core/obj/project.assets.json
+INF36207.TOTP2.Core/obj/Debug/net6.0/INF36207.TOTP2.Core.csproj.CoreCompileInputs.cache
+INF36207.TOTP2.Core/obj/Debug/net6.0/INF36207.TOTP2.Core.GeneratedMSBuildEditorConfig.editorconfig
+INF36207.TOTP2.Core/obj/INF36207.TOTP2.Core.csproj.nuget.dgspec.json
+INF36207.TOTP2.Core/obj/INF36207.TOTP2.Core.csproj.nuget.g.props
+INF36207.TOTP2.Core/obj/INF36207.TOTP2.Core.csproj.nuget.g.targets

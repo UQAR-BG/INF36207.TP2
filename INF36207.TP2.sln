@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INF36207.TP2.CoreUtils", "I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INF36207.TP2.CoreUtils.Tests", "INF36207.TP2.CoreUtils.Tests\INF36207.TP2.CoreUtils.Tests.csproj", "{114FB890-C51E-4169-ACD8-BE171F66484E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INF36207.TP2.DictionaryGenerator", "DictionaryGenerator\INF36207.TP2.DictionaryGenerator.csproj", "{B3247BE0-6AB9-432F-BE8A-DAC6A07CFE5C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6D516F18-F8F4-4DA9-89DC-D0A2BABED351} = {6D516F18-F8F4-4DA9-89DC-D0A2BABED351}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +32,10 @@ Global
 		{114FB890-C51E-4169-ACD8-BE171F66484E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{114FB890-C51E-4169-ACD8-BE171F66484E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{114FB890-C51E-4169-ACD8-BE171F66484E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3247BE0-6AB9-432F-BE8A-DAC6A07CFE5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3247BE0-6AB9-432F-BE8A-DAC6A07CFE5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3247BE0-6AB9-432F-BE8A-DAC6A07CFE5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3247BE0-6AB9-432F-BE8A-DAC6A07CFE5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
