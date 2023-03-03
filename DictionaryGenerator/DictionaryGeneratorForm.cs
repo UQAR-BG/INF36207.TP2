@@ -98,6 +98,7 @@ namespace INF36207.TP2.DictionaryGenerator
 
             writer.Close();
 
+            MessageBox.Show("Le dictionnaire de mots de passe a été généré avec succès !");
         }
     }
 }
