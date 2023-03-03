@@ -3,13 +3,8 @@ using INF36207.TP2.Files;
 using INF36207.TP2.Hashing;
 using INF36207.TP2.Utils;
 using System;
-using System.Reflection.Emit;
 using System.Threading;
 using System.Windows.Forms;
-using System.Timers;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace INF36207.TP2.Md5PasswordFinder
 {

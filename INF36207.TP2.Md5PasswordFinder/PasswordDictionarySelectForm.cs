@@ -24,11 +24,12 @@ namespace INF36207.TP2.Md5PasswordFinder
 
         private void btnOuvrirFichier_Click(object sender, EventArgs e)
         {
-
-            openFileDialog.ShowDialog();
-            string filePath = openFileDialog.FileName;
-            _passwordFinderForm = new Md5PasswordFinderForm(filePath);
-            _passwordFinderForm.ShowDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;
+                _passwordFinderForm = new Md5PasswordFinderForm(filePath);
+                _passwordFinderForm.ShowDialog();
+            }
         }
     }
 }

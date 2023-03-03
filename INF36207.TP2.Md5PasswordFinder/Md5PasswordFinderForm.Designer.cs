@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Md5PasswordFinderForm));
             this.lblNbreMots = new System.Windows.Forms.Label();
             this.panelNbrMots = new System.Windows.Forms.Panel();
-            this.picCadenas = new System.Windows.Forms.PictureBox();
             this.lblHash = new System.Windows.Forms.Label();
             this.txtHash = new System.Windows.Forms.TextBox();
             this.btnHash = new System.Windows.Forms.Button();
             this.lblTentatives = new System.Windows.Forms.Label();
             this.lblCountdown = new System.Windows.Forms.Label();
+            this.picCadenas = new System.Windows.Forms.PictureBox();
             this.panelNbrMots.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCadenas)).BeginInit();
             this.SuspendLayout();
@@ -57,14 +58,6 @@
             this.panelNbrMots.Name = "panelNbrMots";
             this.panelNbrMots.Size = new System.Drawing.Size(464, 28);
             this.panelNbrMots.TabIndex = 1;
-            // 
-            // picCadenas
-            // 
-            this.picCadenas.Location = new System.Drawing.Point(12, 12);
-            this.picCadenas.Name = "picCadenas";
-            this.picCadenas.Size = new System.Drawing.Size(80, 80);
-            this.picCadenas.TabIndex = 2;
-            this.picCadenas.TabStop = false;
             // 
             // lblHash
             // 
@@ -109,6 +102,17 @@
             this.lblCountdown.Size = new System.Drawing.Size(83, 13);
             this.lblCountdown.TabIndex = 7;
             this.lblCountdown.Text = "Temps écoulé : ";
+            // 
+            // picCadenas
+            // 
+            this.picCadenas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.picCadenas.Image = ((System.Drawing.Image)(resources.GetObject("picCadenas.Image")));
+            this.picCadenas.InitialImage = null;
+            this.picCadenas.Location = new System.Drawing.Point(12, 15);
+            this.picCadenas.Name = "picCadenas";
+            this.picCadenas.Size = new System.Drawing.Size(80, 80);
+            this.picCadenas.TabIndex = 2;
+            this.picCadenas.TabStop = false;
             // 
             // Md5PasswordFinderForm
             // 
