@@ -22,8 +22,9 @@ namespace INF36207.TP2.DictionaryGenerator
 
         private void btnSelectionner_Click(object sender, EventArgs e)
         {
-            folderBrowserDialog.ShowDialog();
-            lbLocation.Text = folderBrowserDialog.SelectedPath;
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK){
+                lbLocation.Text = folderBrowserDialog.SelectedPath;
+            }
         }
 
         private void btnGenerer_Click(object sender, EventArgs e)
